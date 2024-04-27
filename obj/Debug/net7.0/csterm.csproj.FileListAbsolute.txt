@@ -1,0 +1,15 @@
+/mnt/c/Users/iain/Documents/csterm/bin/Debug/net7.0/csterm
+/mnt/c/Users/iain/Documents/csterm/bin/Debug/net7.0/csterm.deps.json
+/mnt/c/Users/iain/Documents/csterm/bin/Debug/net7.0/csterm.runtimeconfig.json
+/mnt/c/Users/iain/Documents/csterm/bin/Debug/net7.0/csterm.dll
+/mnt/c/Users/iain/Documents/csterm/bin/Debug/net7.0/csterm.pdb
+/mnt/c/Users/iain/Documents/csterm/obj/Debug/net7.0/csterm.csproj.AssemblyReference.cache
+/mnt/c/Users/iain/Documents/csterm/obj/Debug/net7.0/csterm.GeneratedMSBuildEditorConfig.editorconfig
+/mnt/c/Users/iain/Documents/csterm/obj/Debug/net7.0/csterm.AssemblyInfoInputs.cache
+/mnt/c/Users/iain/Documents/csterm/obj/Debug/net7.0/csterm.AssemblyInfo.cs
+/mnt/c/Users/iain/Documents/csterm/obj/Debug/net7.0/csterm.csproj.CoreCompileInputs.cache
+/mnt/c/Users/iain/Documents/csterm/obj/Debug/net7.0/csterm.dll
+/mnt/c/Users/iain/Documents/csterm/obj/Debug/net7.0/refint/csterm.dll
+/mnt/c/Users/iain/Documents/csterm/obj/Debug/net7.0/csterm.pdb
+/mnt/c/Users/iain/Documents/csterm/obj/Debug/net7.0/csterm.genruntimeconfig.cache
+/mnt/c/Users/iain/Documents/csterm/obj/Debug/net7.0/ref/csterm.dll
