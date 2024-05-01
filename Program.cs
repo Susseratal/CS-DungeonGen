@@ -91,7 +91,6 @@ namespace Galnet {
         }
 
         public static void GenerateDungeon() {
-            Console.WriteLine("Digging the dungeon...");
             RoomType[] requiredRooms = {RoomType.Start, RoomType.Treasure, RoomType.Boss, RoomType.Basic, RoomType.Basic, RoomType.Basic, RoomType.Basic, RoomType.Basic};
             Room[,] dungeon = DrawEmptyMap();
 
@@ -105,10 +104,39 @@ namespace Galnet {
                 dungeon[coordinates.X, coordinates.Y] = new Room(requiredRooms[i], coordinates);
             }
 
-            // figure out how to connect up all the rooms 
-            //
-            //  probably a 2 step for loop to index all the rooms which need connecting or something 
+            IntVec2 pointA = new IntVec2(0, 0);
+            IntVec2 pointB = new IntVec2(0, 0);
+            IntVec2 delta = new IntVec2(0, 0);
+            for(int i = 0; i < gridSize; i++) {
+                for(int j = 0; j < gridSize; j++) {
+                    RoomType currentRoomType = dungeon[i, j].GetRoomType();
+                    if(currentRoomType != RoomType.None) {
+                        pointB = pointA;
+                        pointA = dungeon[i,j].GetCoords();
 
+                        if(pointB.X == 0 && pointB.Y == 0) {
+                            break;
+                        }
+
+                        // while()
+
+                        delta.X = pointA.X - pointB.X;
+                        delta.Y = pointA.Y - pointB.Y;
+
+                        // TODO consider reinstalling this as we may want positive deltas 
+                        /*
+                        if (pointB.Y > pointA.Y) {
+                            delta.Y = pointB.Y - pointA.Y;
+                        }
+                        else {
+                            delta.Y = pointA.Y - pointB.Y;
+                        }
+                        */
+
+                        Console.WriteLine("Delta: (" + delta.X + ", " + delta.Y + ")");
+                    }
+                }
+            }
 
             Dictionary < RoomType, char > roomCharacterMap = new Dictionary < RoomType, char > ();
 
@@ -123,7 +151,7 @@ namespace Galnet {
             char currentCellCharacter = '.';
             RoomType currentRoom = RoomType.None;
 
-            ClearLines(1);
+            // ClearLines(1);
 
             for (int row = 0; row < gridSize; row++) {
                 for (int col = 0; col < gridSize; col++){
@@ -142,6 +170,7 @@ namespace Galnet {
             Console.CursorVisible = false;
             Console.WriteLine(logo);
 
+            Console.WriteLine("Digging the dungeon...");
             GenerateDungeon(); 
 
             while (true) {
